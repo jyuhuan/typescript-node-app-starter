@@ -5,7 +5,7 @@
   "main": "target/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node target/js/main.js",
+    "start": "npm run clean; npm run build; node target/js/main.js",
     "build": "concurrently 'tsc -p .' 'npm run copycss' 'npm run copyhtml' 'npm run copyresources' ",
     "copycss": "rsync -a --include='*.css' ./src/css/ ./target/css/",
     "copyhtml": "rsync -a --include='*.html' ./src/html/ ./target/html/",
