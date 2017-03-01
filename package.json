@@ -1,0 +1,25 @@
+{
+  "name": "tasks",
+  "version": "0.0.0",
+  "description": "A todo task manager for researchers",
+  "main": "target/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node target/js/main.js",
+    "build": "concurrently 'tsc -p .' 'npm run copycss' 'npm run copyhtml' 'npm run copyresources' ",
+    "copycss": "rsync -a --include='*.css' ./src/css/ ./target/css/",
+    "copyhtml": "rsync -a --include='*.html' ./src/html/ ./target/html/",
+    "copyresources": "rsync -a ./src/resources/ ./target/resources/ ",
+    "clean": "rm -rf ./target/; mkdir -p 'target/css' 'target/html' 'target/resources' 'target/js' "
+  },
+  "keywords": [
+    "todo",
+    "tasks"
+  ],
+  "author": "Yuhuan Jiang <jyuhuan@gmail.com>",
+  "license": "ISC",
+
+  "devDependencies": {
+    "concurrently": "^3.2.0"
+  }
+}
