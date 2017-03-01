@@ -1,7 +1,7 @@
 {
-  "name": "tasks",
+  "name": "typescript-node-app-starter",
   "version": "0.0.0",
-  "description": "A todo task manager for researchers",
+  "description": "Starter code for Node.js apps written in TypeScript",
   "main": "target/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,10 +12,7 @@
     "copyresources": "rsync -a ./src/resources/ ./target/resources/ ",
     "clean": "rm -rf ./target/; mkdir -p 'target/css' 'target/html' 'target/resources' 'target/js' "
   },
-  "keywords": [
-    "todo",
-    "tasks"
-  ],
+  "keywords": [],
   "author": "Yuhuan Jiang <jyuhuan@gmail.com>",
   "license": "ISC",
 
